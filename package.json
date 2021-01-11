@@ -1,5 +1,5 @@
 {
-  "homepage": "http://sudhaboga.github.io/CSVDataUpload",
+  "homepage": "http://Sudha-Boga.github.io/CSVUpload",
   "name": "dealdataupload",
   "version": "0.1.0",
   "private": true,
@@ -48,7 +48,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint ./src/",
     "predeploy": "npm run build",
-"deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [

@@ -20,7 +20,8 @@ export class Home extends Component {
     
   }
 
-  componentDidMount() {
+    componentDidMount() {
+
     this.getDeals();
   }
   
@@ -53,12 +54,17 @@ export class Home extends Component {
                   uploading: false,
               });
               
-              if(!isNullOrUndefined(res.data.errors) )
-              this.setState({ errors: res.data.errors});  
+             
+
               if(!isNullOrUndefined(res.data.deals) )
               this.setState({ deals: res.data.deals});  
               this.getMostSoldVehicles();
-              message.success('upload successfully.');
+              if (!isNullOrUndefined(res.data.errors)) {
+                  this.setState({ errors: res.data.errors });
+              }
+              else {
+                  message.success('upload successfully.');
+              }
           })
           .catch(err => {
               console.log(err);
